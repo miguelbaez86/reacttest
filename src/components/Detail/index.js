@@ -6,6 +6,7 @@ const Detail = ({compare, itemDetail}) =>
     <div className="text-center">
     {itemDetail && 
       <table className="table">
+      <tbody>
           <tr>
               <th key={itemDetail.id}>
                 {itemDetail.name}
@@ -35,7 +36,8 @@ const Detail = ({compare, itemDetail}) =>
           <tr>
               <td>weight:</td>
               <td>{itemDetail.weight}</td>
-          </tr>         
+          </tr>
+          </tbody>         
       </table>
       }
     </div>

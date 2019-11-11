@@ -22,11 +22,10 @@ class Home extends Component {
   state = {listItems: this.props.items}
 
   componentWillMount() {
-    this.props.actions.getItems()
+    this.props.actions.GET_LIST_START()
   }
 
   componentWillReceiveProps (nextProps,previousState) {
-    debugger;
     const {listItems} = this.state;
 
     if (!listItems.length) {
@@ -63,6 +62,7 @@ class Home extends Component {
         <Modal 
            isOpen={(itemDetail != null)}
            style={customStyles}
+           ariaHideApp={false}
         >
         <Detail compare={actions.compare} itemDetail={itemDetail}/>
        </Modal>
